@@ -1,10 +1,15 @@
 var express = require('express');
 app = express();
 
+var port = "8080";
+app.set('port', port);
+
+module.exports = app;
+
 app.get('/', function(req,res){
     res.send('Hello World!\n')  ;  
 });
 
-app.listen(8080,function(){
+app.listen(port,function(){
     console.log('ejemplo app puerto 8080')
 })
